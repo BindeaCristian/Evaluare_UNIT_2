@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="javascript.js"></script>
+    <title>Evaluare UNIT 2 - Bindea Cristian</title>
+
+</head>
+
+<body>
+    <header>
+    </header>
+    <div id="heading">
+        <h1>BINDEA Gheorghe Cristian</h1>
+        <p id="mail">
+            Bindea.Va.Gheorghe@utcluj.didatec.ro<br />
+            bindea_cristian15@outlook.com
+        </p>
+    </div>
+
+    <div id="div-retea">
+        <h2>Structura rețelei personale si accesul la internet</h2>
+        <img class= "responsive-img" src="imagini/Retea-imagine.png" alt="Imagine cu structura retelei personale" />
+        <h2>Caracteristicile conexiunii la rețea</h2>
+        <ul id="lista-retea">
+            <li>Adresa MAC: 70-52-12-C0-9C-00</li>
+            <li>Adresa IP: 192.168.0.103</li>
+            <li>Debit la download: 92.1 Mb/s</li>
+            <li>Debit la upload: 94.76 Mb/s</li>
+        </ul>
+    </div>
+    <div id="slideshow-div">
+        <h2 id="h2-slideshow" onclick="Slideshow()">Utilizarea resurselor</h2>
+        <div id="imagini-resurse" class="divImagini">
+            <img src="imagini/Info_CPU.png" alt="Informatii CPU">
+            <img src="imagini/Info_Memory.png" alt="Informatii Memorie">
+            <img src="imagini/Info_Services.png" alt="Informatii servicii active">
+            <img src="imagini/Open_Ports.png" alt="Porturi deschise">
+        </div>
+
+
+        <div id="slideshow-div-div">
+
+            <div id="containerSlideshow" class="slideshow-container">
+                <div class="mySlides fade">
+                    <img src="imagini/Info_CPU.png" style="height: 400px" />
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="imagini/Info_Memory.png" style="height: 400px" />
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="imagini/Info_Services.png" style="height: 400px" />
+                </div>
+                <div class="mySlides fade">
+                    <img src="imagini/Open_Ports.png" style="height: 400px" />
+                </div>
+            </div>
+            <br />
+
+            <div style="text-align: center;">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+    </div>
+    <div style="overflow-x:auto;">
+        <h2>Specificații tehnice ale stației principale de lucru</h2>
+        <table>
+            <tr>
+                <th>Denumire componentă</th>
+                <th>Producător</th>
+                <th>Parametri</th>
+            </tr>
+            <tr>
+                <td>CPU: i5-7200U</td>
+                <td>Intel</td>
+                <td>
+                    <li>Frecveță: 2.50 GHz - 3.10 GHz</li>
+                    <li>Nr. cores: 2</li>
+                    <li>Consum mediu de putere: 15 W</li>
+                </td>
+
+            </tr>
+            <tr>
+                <td>SSD: XPG SX8200 Pro</td>
+                <td>Adata</td>
+                <td>
+                    <li>Capacitate: 256 GB</li>
+                    <li>Viteză scriere: 1150 MB/s</li>
+                    <li>Viteză citire: 3350 MB/s</li>
+                </td>
+            </tr>
+            <tr>
+                <td>GPU: HD 620 Graphics</td>
+                <td>Intel</td>
+                <td>
+                    <li>Tip: Integrated graphics</li>
+                    <li>Technologia de producție: 14-nanometrii</li>
+                    <li>Capacitate eDRAM: 64 Mb</li>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <footer>
+    </footer>
+    <script>
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            setTimeout(showSlides, 3000);
+        }
+    </script>
+</body>
+
+</html>
